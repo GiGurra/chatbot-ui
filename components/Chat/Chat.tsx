@@ -289,8 +289,9 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   };
 
   const onClearAll = () => {
+    let x = t('Are you sure you want to clear all messages?')
     if (
-      confirm(t<string>('Are you sure you want to clear all messages?')) &&
+      confirm(x) &&
       selectedConversation
     ) {
       handleUpdateConversation(selectedConversation, {
